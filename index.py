@@ -1,6 +1,7 @@
 import requests
 import random2
 import json
+from stringcolor import *
 
 #Call Cat Fact service and return 10 different cat facts at random from library
 response = requests.get(
@@ -21,5 +22,5 @@ rand2 = random2.random()
 rand210=rand2*10
 catFactNumber=round(rand10*rand210)
 
-#Print Cat fact e.g. Cat Fact 7: Cats are not Dogs
-print('Cat Fact #{1}: {0}'.format(catFactList[rand10Int], catFactNumber))
+#Print Cat fact e.g. Cat Fact 7: Cats are not Dogs formatted in Lime and Bold
+print(cs('Cat Fact #{1}: {0}'.format(catFactList[rand10Int], catFactNumber), "lime").bold())
